@@ -1,6 +1,6 @@
 # .NET
-bin/
-obj/
+**/bin/
+**/obj/
 *.user
 *.userosscache
 *.suo
