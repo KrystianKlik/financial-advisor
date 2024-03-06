@@ -9,13 +9,13 @@ namespace CoreMicroservice.Services
     {
         private readonly ConnectionFactory _connectionFactory;
         private IConnection _connection;
-        private IModel _channel;
+        //private IModel _channel;
 
         public RabbitMQService()
         {
             _connectionFactory = new ConnectionFactory() { HostName = "localhost" };
-            _connection = _connectionFactory.CreateConnection();
-            _channel = _connection.CreateModel();
+            //_connection = _connectionFactory.CreateConnection();
+            //_channel = _connection.CreateModel();
         }
 
         public void PublishMessage(string queueName, string message)
