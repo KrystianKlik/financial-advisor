@@ -27,8 +27,8 @@ namespace CoreMicroservice.Services
 
         public void ConsumeMessages(string queueName, Action<string> messageHandler)
         {
-            _channel.QueueDeclare(queue: queueName, durable: false, exclusive: false, autoDelete: false, arguments: null);
-            var consumer = new EventingBasicConsumer(_channel);
+            //_channel.QueueDeclare(queue: queueName, durable: false, exclusive: false, autoDelete: false, arguments: null);
+            //var consumer = new EventingBasicConsumer(_channel);
             consumer.Received += (model, ea) =>
             {
                 var message = Encoding.UTF8.GetString(ea.Body.ToArray());
